@@ -5,8 +5,9 @@
     %h3= star_rating(restaurant.average_rating.to_i)
     - restaurant.reviews.each do |review|
       = review.thoughts
-      = link_to "Endorse Review", review_endorsements_path(review), method: :post
-      %p= pluralize review.endorsements.count, 'endorsement'
+      = link_to "Endorse Review", review_endorsements_path(review), class: 'endorsements-link'
+      %span.endorsements_count = review.endorsements.count
+      = 'endorsement'.pluralize review.endorsements.count
       %br
       %br
     - if (user_signed_in?)
