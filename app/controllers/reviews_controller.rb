@@ -14,7 +14,6 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.build_with_user(review_params, current_user)
     if @review.save
-      # @restaurant.average_rating
       redirect_to "/restaurants"
     else
       if @review.errors[:user]
