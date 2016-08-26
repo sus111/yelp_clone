@@ -32,13 +32,18 @@ gem 'jbuilder', '~> 2.5'
 
 # HAML templating engine
 gem 'haml'
-
+gem 'aws-sdk'
 # Devise used for login and authentication
 gem 'devise'
 # Devise related gems
 gem 'omniauth-facebook'
+
+gem 'paperclip'
+
 gem 'pry-rails'
 gem 'shoulda-matchers'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -2,6 +2,7 @@
 - if @restaurants.all.any?
   - @restaurants.all.each do |restaurant|
     %h3= link_to restaurant.name, restaurant_path(restaurant)
+    %div= image_tag restaurant.image.url(:thumb)
     %h3= star_rating(restaurant.average_rating.to_i)
     - restaurant.reviews.each do |review|
       = review.thoughts
