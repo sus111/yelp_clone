@@ -8,16 +8,16 @@ feature "restaurants" do
     end
   end
 
-  context "viewing restaurants" do
-    scenario "lets a user view a restaurant" do
-      sign_up
-      add_restaurant
-      restaurant = Restaurant.where(name: "KFC").first
-      click_link "KFC"
-      expect(page).to have_content "KFC"
-      expect(current_path).to eq "/restaurants/#{restaurant.id}"
-    end
-  end
+  # context "viewing restaurants" do
+  #   scenario "lets a user view a restaurant" do
+  #     sign_up
+  #     add_restaurant
+  #     restaurant = Restaurant.where(name: "KFC").first
+  #     click_link "KFC"
+  #     expect(page).to have_content "KFC"
+  #     expect(current_path).to eq "/restaurants/#{restaurant.id}"
+  #   end
+  # end
 
   context "user not signed in" do
     scenario "cannot add new restaurant" do
