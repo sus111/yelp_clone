@@ -6,7 +6,7 @@
     - restaurant.reviews.each do |review|
       = review.thoughts
       = link_to "Endorse Review", review_endorsements_path(review), class: 'endorsements-link'
-      %span.endorsements_count = review.endorsements.count
+      %span.endorsements_count= review.endorsements.count
       = 'endorsement'.pluralize review.endorsements.count
       %br
       %br
